@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:/tmp/githubinfo
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    generate-ddl: false
+    hibernate:
+      ddl-auto: update
+  h2:
+    console.enabled: true
+
+github:
+  api-url: "https://api.github.com/users/{owner}"
+
+server:
+  port: 8081
